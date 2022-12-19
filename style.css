@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: flex;
+  width: 65vw;
+  align-items: flex-end;
+}
+.fylo {
+  background-color: hsl(228, 56%, 26%);
+  flex: 1;
+  padding: 2.5rem 2rem;
+  border-radius: 10px 100px 10px 10px;
+  margin-right: 2rem;
+}
+.fylo > img {
+  margin-bottom: 2rem;
+}
+.files {
+  display: flex;
+  align-items: center;
+}
+.files .image {
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(229, 57%, 11%);
+  margin-right: 1rem;
+  border-radius: 0.375rem;
+}
+.remain {
+  flex: 2;
+  background-color: hsl(228, 56%, 26%);
+  padding: 2.5rem 2rem;
+  position: relative;
+  border-radius: 10px;
+}
+.remain .float {
+  position: absolute;
+  background-color: white;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  right: 40px;
+  top: -56px;
+}
+.remain .float::after {
+  content: "";
+  border-width: 1rem;
+  border-color: white white transparent transparent;
+  border-style: solid;
+  position: absolute;
+  right: 0;
+}
+.remain .float span {
+  font-size: 2rem;
+  color: black;
+  margin-right: 0.5rem;
+}
+.remain .float p {
+  font-weight: bold;
+  color: hsl(229, 7%, 55%);
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.remain h4 {
+  color: hsla(243, 100%, 93%, 0.6);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.remain h4 span {
+  color: hsl(243, 100%, 93%);
+  font-weight: bold;
+}
+.remain .line {
+  position: relative;
+}
+.remain hr {
+  border-style: solid;
+  border-width: 8px;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  border-color: hsl(229, 57%, 11%);
+}
+.remain .line span {
+  position: absolute;
+  top: 0;
+  width: 81.5%;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 100%;
+  border-radius: 20px;
+}
+.remain .line span::after {
+  content: "";
+  position: absolute;
+  width: 0.7986rem;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(-20%);
+}
+.remain .all-memory {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.remain .all-memory span {
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+  body {
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+  }
+  main {
+    display: block;
+    width: 70vw;
+  }
+  .fylo {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+  .remain h4 {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .remain .float {
+    top: 130px;
+    right: 25%;
+  }
+  .remain .float::after {
+    display: none;
+  }
+}
